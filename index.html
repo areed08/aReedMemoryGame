@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>Color Memory!</h1>
+    <p>
+      Welcome to Color Memory! Repeat back the pattern by pressing
+      the corresponding buttons. If you remember all eight colors, you win! Be careful, you 
+      only have 80 seconds! You get three wrong guess or else, it's game over!
+    </p>
+    <audio src="https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Fmixkit-game-level-music-689.wav?v=1616614288356"
+           id= "GameSound"></audio>
+    <button id="startBtn" onclick="startGame()">
+      Start
+    </button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">
+      Stop
+    </button>
+    <div id="countDown" class= "hidden">
+    </div>
+    <div id="gameButtonArea">
+      <audio src="https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Fmixkit-unlock-game-notification-253.wav?v=1616609622562"
+           id= "buttonAudio"></audio>
+      <button id = "button1" value= "sound" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone(1)">
+        <img src = "https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Ffrog.png?v=1616617073780" id= "image1" class = "hidden">
+      </button>
+      <button id = "button2" value= "sound" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone(2)">
+        <img src = "https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Fwhale.jpeg?v=1616617103598" id= "image2" class = "hidden">
+      </button>
+      <button id = "button3" value= "sound" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone(3)">
+        <img src = "https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Fparrot.png?v=1616617090945" id= "image3" class = "hidden">
+      </button>
+      <button id = "button4" value= "sound" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone(4)">
+        <img src = "https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Flion.jpeg?v=1616617084785" id= "image4" class = "hidden">
+      </button>
+      <button id = "button5" value= "sound" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone(5)">
+        <img src = "https://cdn.glitch.com/96859fa1-130f-422b-8c44-d55469d7cd2c%2Ftiger.jpeg?v=1616617116870" id= "image5" class = "hidden">
+      </button>
+
+    </div>
+  </body>
+</html>
